@@ -1,0 +1,6 @@
+rails generate model User name:string email:string password_hash:string heliskiing:boolean pickle:boolean walnut:boolean birthday:date planet:string comments:text spam:boolean
+
+
+rails generate model BillingInformation user_id:integer name:string address:string city:string state:string postal_code:string country:string payment_method:string card_number:string expiration_date:string same_as_shipping_information:boolean 
+
+rails generate model ShippingInformation user_id:integer name:string address:string city:string state:string postal_code:string country:string:string 

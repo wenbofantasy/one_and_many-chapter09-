@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  password_hash: MyString
+  heliskiing: false
+  pickle: false
+  walnut: false
+  birthday: 2013-12-14
+  planet: MyString
+  comments: MyText
+
+two:
+  name: MyString
+  email: MyString
+  password_hash: MyString
+  heliskiing: false
+  pickle: false
+  walnut: false
+  birthday: 2013-12-14
+  planet: MyString
+  comments: MyText

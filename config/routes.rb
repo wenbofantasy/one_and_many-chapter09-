@@ -1,6 +1,7 @@
 Chapter09::Application.routes.draw do
   get "users/new"
   match "profile" => "users#profile"
+  match "dashboard" => "users#dashboard"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -8,4 +8,8 @@ class UsersController < ApplicationController
   def profile
   end
 
+  def dashboard
+    render :process
+  end
+
 end
