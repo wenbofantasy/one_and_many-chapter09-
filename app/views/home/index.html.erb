@@ -1,4 +1,5 @@
 <% content_for :head  do %>
+<%= javascript_include_tag "jquery-1.10.2", "jquery_ujs" %>
 <script type="text/javascript">
 $(document).ready(function() {
 var score = 0;
@@ -69,7 +70,11 @@ $('#next').click(function() {
 </script>
 <% end %>
 
-<h1>Debugging with Firebug <%= link_to "Login", login_url if current_user.blank? %></h1>
+<h1>Debugging with Firebug 
+  <%= link_to "Login", login_url if current_user.blank? %> 
+  <%= link_to "Sign Up", signup_url if current_user.blank? %> 
+  <%= link_to "Sign Out", signout_url, method: "delete" if current_user.present? %>
+</h1>
 <div id="questionArea">
   <p id="question"></p>
   <p id="answers"></p>

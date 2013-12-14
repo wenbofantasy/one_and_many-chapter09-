@@ -1,7 +1,13 @@
 <% content_for :head do %>
 <%= javascript_include_tag "jquery-1.10.2", "jquery_ujs" %>
 <% end %>
-<h1><%= current_user.name %>'s  Space <%= link_to "Profile information", profile_path if current_user.present? %> </h1>
+<h1>
+  <%= current_user.name %>'s  Space 
+  <% if current_user.present? %>
+    <%= link_to "Profile information", profile_path %> 
+    <%= link_to "Home Page", root_path %>  
+  <% end %>
+</h1>
 <% current_user.attributes.each do |key, val| %>
   <p><span style="display:inline-block; width:120px;"class="key"><%= key %></span>: <span class="value"><%= truncate(val.to_s, length: 30) %></span></p>
 <% end %>
