@@ -69,7 +69,7 @@ $('#next').click(function() {
 </script>
 <% end %>
 
-<h1>Debugging with Firebug</h1>
+<h1>Debugging with Firebug <%= link_to "Login", login_url if current_user.blank? %></h1>
 <div id="questionArea">
   <p id="question"></p>
   <p id="answers"></p>

@@ -1,2 +1,9 @@
-<h1>Form Processed</h1>
-<p>Yay!! You've sucesfully submitted the form.</p>
+<% content_for :head do %>
+<%= javascript_include_tag "jquery-1.10.2", "jquery_ujs" %>
+<% end %>
+<h1><%= current_user.name %>'s  Space <%= link_to "Profile information", profile_path if current_user.present? %> </h1>
+<% current_user.attributes.each do |key, val| %>
+  <p><span style="display:inline-block; width:120px;"class="key"><%= key %></span>: <span class="value"><%= truncate(val.to_s, length: 30) %></span></p>
+<% end %>
+<hr/>
+<p><%= link_to "Log out", signout_url, method: "delete" %></p>

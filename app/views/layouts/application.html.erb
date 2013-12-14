@@ -13,8 +13,10 @@
 
 <div id="contentWrap">
 <div id="main">
-
-<%= yield %>
+  <% flash.each do |key, value| %> 
+    <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% end %> 
+  <%= yield %>
 </div>
 <div id="sidebar">
 <h2>Script 9.2</h2>
