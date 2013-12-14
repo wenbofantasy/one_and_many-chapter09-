@@ -1,0 +1,10 @@
+<% content_for :head  do %>
+<% end %>
+
+<h1>Debugging with Firebug</h1>
+<div id="questionArea">
+  <p id="question"></p>
+  <p id="answers"></p>
+  <p id="result"></p>
+  <input type="button" value="Start Quiz" id="next">
+</div>

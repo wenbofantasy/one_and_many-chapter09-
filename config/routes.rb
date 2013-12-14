@@ -1,7 +1,9 @@
 Chapter09::Application.routes.draw do
-  get "users/new"
+  root :to => 'home#index'
   match "profile" => "users#profile"
   match "dashboard" => "users#dashboard"
+  match "login" => "sessions#new"
+  match "signup" => "users#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
