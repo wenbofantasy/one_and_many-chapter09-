@@ -11,4 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-1.10.2
+//= require jquery_ujs
 //= require_tree .
